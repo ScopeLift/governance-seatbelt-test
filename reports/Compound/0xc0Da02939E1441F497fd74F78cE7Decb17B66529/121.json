@@ -1,80 +1,55 @@
 {
-  "title": "Compound Proposal 121: Protocol Upgrade",
-  "proposalText": "This proposal aims to upgrade the Compound protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
-  "status": "success",
-  "summary": "All checks passed successfully. The proposal appears safe to execute.",
+  "title": "Emergency Action Proposal",
+  "proposalText": "# Treasury Allocation Proposal\nThe Compound community proposes allocating treasury funds for strategic initiatives that will drive long-term growth and adoption.",
+  "status": "warning",
+  "summary": "Simulation completed with warnings for proposal: \"Emergency Action Proposal\".",
   "checks": [
     {
-      "name": "State Change Analysis",
-      "status": "success",
-      "description": "All state changes look reasonable"
+      "title": "Reports all state changes from the proposal",
+      "status": "passed",
+      "details": "**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`",
+      "info": [
+        "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
+        "    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`"
+      ]
     },
     {
-      "name": "Access Control Check",
-      "status": "warning",
-      "description": "Some functions require elevated permissions"
+      "title": "Decodes target calldata into a human-readable format",
+      "status": "passed",
+      "details": "**Info**: `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)",
+      "info": [
+        "`0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)"
+      ]
     }
   ],
   "stateChanges": [
     {
-      "address": "0x1975e1e24b7818",
-      "slot": "0x7144d43b2730c",
-      "before": "0x2a3da4071b8c",
-      "after": "0x5c774a87faf658",
-      "description": "Storage slot 1 updated"
+      "contract": "GovernorBravo",
+      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "key": "0xbf2e851e4c9118",
+      "oldValue": "0x76d215cca0e748",
+      "newValue": "0x0d1f04098028b"
     },
     {
-      "address": "0x783ac0d9463a18",
-      "slot": "0xd7e1725a96c708",
-      "before": "0xe3a6ad7ee7ec1",
-      "after": "0x29019c647ef888",
-      "description": "Storage slot 2 updated"
+      "contract": "KeeperRegistry",
+      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+      "key": "0x2bc483735dcb38",
+      "oldValue": "0xa485a3fdae5428",
+      "newValue": "0x02351f0874258"
     },
     {
-      "address": "0x0863ce51fa4d88",
-      "slot": "0x1ec97a7cac98d8",
-      "before": "0xdead63c4bb7c28",
-      "after": "0x0318499c53c4b",
-      "description": "Storage slot 3 updated"
-    },
-    {
-      "address": "0x5c614170b16758",
-      "slot": "0x0b17eb0c225368",
-      "before": "0x6db2c8f7197258",
-      "after": "0xdb969d3ce3f15",
-      "description": "Storage slot 4 updated"
-    },
-    {
-      "address": "0xc002355b011cf8",
-      "slot": "0x459b314bd8ceb8",
-      "before": "0x4fabf4ff0392c8",
-      "after": "0x2a54742ecd30b8",
-      "description": "Storage slot 5 updated"
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0x1809b98364568",
+      "oldValue": "0xc4363b8f2e1d9",
+      "newValue": "0xe24a54fcedbad8"
     }
   ],
-  "events": [
-    {
-      "address": "0xf43ba8f0e4b1b8",
-      "topics": [
-        "0x97f6c261aa2038",
-        "0xc5d1a88eab361"
-      ],
-      "data": "0x7d6eec719bbfa8",
-      "decoded": {
-        "name": "ProposalExecuted",
-        "signature": "Transfer(address,address,uint256)",
-        "args": {
-          "from": "0xc802e952416878",
-          "to": "0x48d2ad266a0598",
-          "value": "651092"
-        }
-      }
-    }
-  ],
+  "events": [],
   "metadata": {
-    "blockNumber": "18069687",
-    "timestamp": "2025-06-16T16:44:38.561Z",
+    "blockNumber": "22045234",
+    "timestamp": "1750022940",
     "proposalId": "121",
-    "proposer": "0xde421b52f69af8"
+    "proposer": "0x7a32d18b266b28"
   }
 }

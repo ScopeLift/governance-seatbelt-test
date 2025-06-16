@@ -24,27 +24,63 @@ const TEST_DAOS = [
 
 function generateRandomChecks(): SimulationCheck[] {
   const checkTypes = [
-    { name: 'State Change Analysis', status: 'success' as const, description: 'All state changes look reasonable' },
-    { name: 'Access Control Check', status: 'warning' as const, description: 'Some functions require elevated permissions' },
-    { name: 'Gas Usage Analysis', status: 'success' as const, description: 'Gas usage within expected bounds' },
-    { name: 'External Call Safety', status: 'error' as const, description: 'Detected potentially unsafe external call' },
-    { name: 'Token Balance Check', status: 'success' as const, description: 'Token balances preserved correctly' }
+    {
+      title: 'Reports all state changes from the proposal',
+      status: 'passed' as const,
+      details: '**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c"` to `"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c"`',
+      info: [
+        'KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`',
+        '    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c"` to `"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c"`'
+      ]
+    },
+    {
+      title: 'Decodes target calldata into a human-readable format',
+      status: 'passed' as const,
+      details: '**Info**: `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)',
+      info: [
+        '`0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)'
+      ]
+    },
+    {
+      title: 'Check all targets are verified on Etherscan',
+      status: 'passed' as const,
+      details: '**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)',
+      info: [
+        '[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)'
+      ]
+    },
+    {
+      title: 'Check all touched contracts do not contain selfdestruct',
+      status: 'warning' as const,
+      details: '**Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)',
+      info: [
+        '[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)'
+      ]
+    }
   ];
   
-  return checkTypes.slice(0, Math.floor(Math.random() * 4) + 2);
+  return checkTypes.slice(0, Math.floor(Math.random() * 3) + 2);
 }
 
 function generateRandomStateChanges(): SimulationStateChange[] {
+  const contractNames = ['KeeperRegistry', 'Uni (Uniswap)', 'GovernorBravo'];
+  const contractAddresses = [
+    '0x02777053d6764996e594c3E88AF1D58D5363a2e6',
+    '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
+    '0x408ED6354d4973f66138C91495F2f2FCbd8724C3'
+  ];
+  
   const changes: SimulationStateChange[] = [];
-  const numChanges = Math.floor(Math.random() * 5) + 1;
+  const numChanges = Math.floor(Math.random() * 3) + 2;
   
   for (let i = 0; i < numChanges; i++) {
+    const contractIndex = Math.floor(Math.random() * contractNames.length);
     changes.push({
-      address: `0x${Math.random().toString(16).substr(2, 40)}`,
-      slot: `0x${Math.random().toString(16).substr(2, 64)}`,
-      before: `0x${Math.random().toString(16).substr(2, 64)}`,
-      after: `0x${Math.random().toString(16).substr(2, 64)}`,
-      description: `Storage slot ${i + 1} updated`
+      contract: contractNames[contractIndex],
+      contractAddress: contractAddresses[contractIndex],
+      key: `0x${Math.random().toString(16).substr(2, 64)}`,
+      oldValue: `0x${Math.random().toString(16).substr(2, 64)}`,
+      newValue: `0x${Math.random().toString(16).substr(2, 64)}`
     });
   }
   
@@ -52,51 +88,46 @@ function generateRandomStateChanges(): SimulationStateChange[] {
 }
 
 function generateRandomEvents(): SimulationEvent[] {
-  const events: SimulationEvent[] = [];
-  const numEvents = Math.floor(Math.random() * 3) + 1;
-  
-  for (let i = 0; i < numEvents; i++) {
-    events.push({
-      address: `0x${Math.random().toString(16).substr(2, 40)}`,
-      topics: [
-        `0x${Math.random().toString(16).substr(2, 64)}`,
-        `0x${Math.random().toString(16).substr(2, 64)}`
-      ],
-      data: `0x${Math.random().toString(16).substr(2, 128)}`,
-      decoded: {
-        name: ['Transfer', 'Approval', 'ProposalExecuted'][Math.floor(Math.random() * 3)],
-        signature: 'Transfer(address,address,uint256)',
-        args: {
-          from: `0x${Math.random().toString(16).substr(2, 40)}`,
-          to: `0x${Math.random().toString(16).substr(2, 40)}`,
-          value: (Math.random() * 1000000).toFixed(0)
-        }
-      }
-    });
-  }
-  
-  return events;
+  // Real governance-seatbelt has empty events array in many cases
+  return [];
 }
 
 function generateStructuredReport(daoName: string, governorAddress: string, proposalId: string): StructuredSimulationReport {
   const statuses = ['success', 'warning', 'error'] as const;
   const status = statuses[Math.floor(Math.random() * statuses.length)];
   
+  const titles = [
+    'Scaling V4 and Supporting Unichain',
+    'Protocol Fee Changes',
+    'Treasury Allocation Proposal', 
+    'Governance Parameter Updates',
+    'Emergency Action Proposal'
+  ];
+  
+  const proposalTexts = [
+    `# ${titles[0]}\nPGOV is submitting the proposal on GFX Labs' behalf because GFX no longer has sufficient voting power to submit.\n\nGFX Labs proposes that the ${daoName} DAO allocate funding to support the integration of new protocol features and enhance the ecosystem's capabilities.`,
+    `# ${titles[1]}\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market.`,
+    `# ${titles[2]}\nThe ${daoName} community proposes allocating treasury funds for strategic initiatives that will drive long-term growth and adoption.`
+  ];
+  
+  const selectedTitle = titles[Math.floor(Math.random() * titles.length)];
+  const selectedText = proposalTexts[Math.floor(Math.random() * proposalTexts.length)];
+  
   return {
-    title: `${daoName} Proposal ${proposalId}: Protocol Upgrade`,
-    proposalText: `This proposal aims to upgrade the ${daoName} protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.`,
+    title: selectedTitle,
+    proposalText: selectedText,
     status,
     summary: status === 'success' 
-      ? 'All checks passed successfully. The proposal appears safe to execute.'
+      ? `Simulation completed successfully for proposal: "${selectedTitle}".`
       : status === 'warning'
-      ? 'Some warnings detected. Please review before execution.'
-      : 'Critical issues found. Do not execute without addressing concerns.',
+      ? `Simulation completed with warnings for proposal: "${selectedTitle}".`
+      : `Simulation completed with errors for proposal: "${selectedTitle}".`,
     checks: generateRandomChecks(),
     stateChanges: generateRandomStateChanges(),
     events: generateRandomEvents(),
     metadata: {
-      blockNumber: (18000000 + Math.floor(Math.random() * 100000)).toString(),
-      timestamp: new Date().toISOString(),
+      blockNumber: (22000000 + Math.floor(Math.random() * 500000)).toString(),
+      timestamp: (Math.floor(Date.now() / 1000) - Math.floor(Math.random() * 100000)).toString(),
       proposalId,
       proposer: `0x${Math.random().toString(16).substr(2, 40)}`
     }
@@ -116,20 +147,21 @@ ${report.proposalText}
 
 ## Checks Performed
 
-${report.checks.map(check => `### ${check.name}
+${report.checks.map(check => `### ${check.title}
 - **Status**: ${check.status}
-- **Description**: ${check.description}
-${check.details ? `- **Details**: ${check.details}` : ''}
+- **Details**: ${check.details}
+- **Info**: 
+${check.info.map(info => `  - ${info}`).join('\n')}
 `).join('\n')}
 
 ## State Changes
 
 ${report.stateChanges.map((change, i) => `### Change ${i + 1}
-- **Address**: ${change.address}
-- **Slot**: ${change.slot}
-- **Before**: ${change.before}
-- **After**: ${change.after}
-${change.description ? `- **Description**: ${change.description}` : ''}
+- **Contract**: ${change.contract}
+- **Address**: ${change.contractAddress}
+- **Key**: ${change.key}
+- **Old Value**: ${change.oldValue}
+- **New Value**: ${change.newValue}
 `).join('\n')}
 
 ## Events Emitted

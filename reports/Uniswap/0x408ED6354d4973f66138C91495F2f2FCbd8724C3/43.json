@@ -1,84 +1,62 @@
 {
-  "title": "Uniswap Proposal 43: Protocol Upgrade",
-  "proposalText": "This proposal aims to upgrade the Uniswap protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
-  "status": "success",
-  "summary": "All checks passed successfully. The proposal appears safe to execute.",
+  "title": "Governance Parameter Updates",
+  "proposalText": "# Treasury Allocation Proposal\nThe Uniswap community proposes allocating treasury funds for strategic initiatives that will drive long-term growth and adoption.",
+  "status": "warning",
+  "summary": "Simulation completed with warnings for proposal: \"Governance Parameter Updates\".",
   "checks": [
     {
-      "name": "State Change Analysis",
-      "status": "success",
-      "description": "All state changes look reasonable"
+      "title": "Reports all state changes from the proposal",
+      "status": "passed",
+      "details": "**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`",
+      "info": [
+        "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
+        "    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`"
+      ]
     },
     {
-      "name": "Access Control Check",
-      "status": "warning",
-      "description": "Some functions require elevated permissions"
-    },
-    {
-      "name": "Gas Usage Analysis",
-      "status": "success",
-      "description": "Gas usage within expected bounds"
-    },
-    {
-      "name": "External Call Safety",
-      "status": "error",
-      "description": "Detected potentially unsafe external call"
-    },
-    {
-      "name": "Token Balance Check",
-      "status": "success",
-      "description": "Token balances preserved correctly"
+      "title": "Decodes target calldata into a human-readable format",
+      "status": "passed",
+      "details": "**Info**: `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)",
+      "info": [
+        "`0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)"
+      ]
     }
   ],
   "stateChanges": [
     {
-      "address": "0xae2d3f4b24ca4",
-      "slot": "0x894656ef723868",
-      "before": "0x80bad6dc4d9a78",
-      "after": "0x709da4992fd28",
-      "description": "Storage slot 1 updated"
-    }
-  ],
-  "events": [
-    {
-      "address": "0xa73045f629ef98",
-      "topics": [
-        "0xfa11a380d79f28",
-        "0x5e7362c9b07cd8"
-      ],
-      "data": "0x6a7c6741273fd8",
-      "decoded": {
-        "name": "Transfer",
-        "signature": "Transfer(address,address,uint256)",
-        "args": {
-          "from": "0x59ce3a754a7c78",
-          "to": "0xabefffa66b2608",
-          "value": "975051"
-        }
-      }
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0xd47041eb372128",
+      "oldValue": "0xa40494ffc2831",
+      "newValue": "0x6b25c5db30e588"
     },
     {
-      "address": "0x4ff4ca27cc8ad",
-      "topics": [
-        "0xf2478c41991288",
-        "0x014a8af8fa481"
-      ],
-      "data": "0x2ede115ce1c85",
-      "decoded": {
-        "name": "Approval",
-        "signature": "Transfer(address,address,uint256)",
-        "args": {
-          "from": "0xf1ffdf261890d",
-          "to": "0xba79846e608a78",
-          "value": "71328"
-        }
-      }
+      "contract": "KeeperRegistry",
+      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+      "key": "0xdd69d3a5ffffd",
+      "oldValue": "0xa920add5d3c11",
+      "newValue": "0x3981ff0a854528"
+    },
+    {
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0x2ed470924429c",
+      "oldValue": "0xec9ffe15ab75a8",
+      "newValue": "0x16012c2a8be5f"
+    },
+    {
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0xc5e2855e712388",
+      "oldValue": "0x7b959e5be5eac8",
+      "newValue": "0xaa31e8cdc2bcb"
     }
   ],
+  "events": [],
   "metadata": {
-    "blockNumber": "18056795",
-    "timestamp": "2025-06-16T16:44:34.354Z",
+    "blockNumber": "22317915",
+    "timestamp": "1750067254",
     "proposalId": "43",
-    "proposer": "0xf0e961e673d67"
+    "proposer": "0x21b79408cd3f08"
   }
 }

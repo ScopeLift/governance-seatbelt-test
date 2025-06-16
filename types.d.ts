@@ -9,7 +9,6 @@ export interface StructuredSimulationReport {
   checks: SimulationCheck[];
   stateChanges: SimulationStateChange[];
   events: SimulationEvent[];
-  calldata?: SimulationCalldata;
   metadata: {
     blockNumber: string;
     timestamp: string;
@@ -19,18 +18,18 @@ export interface StructuredSimulationReport {
 }
 
 export interface SimulationCheck {
-  name: string;
-  status: 'success' | 'warning' | 'error';
-  description: string;
-  details?: string;
+  title: string;
+  status: 'passed' | 'warning' | 'error';
+  details: string;
+  info: string[];
 }
 
 export interface SimulationStateChange {
-  address: string;
-  slot: string;
-  before: string;
-  after: string;
-  description?: string;
+  contract: string;
+  contractAddress: string;
+  key: string;
+  oldValue: string;
+  newValue: string;
 }
 
 export interface SimulationEvent {
