@@ -1,0 +1,25 @@
+{
+  "name": "governance-seatbelt-test",
+  "version": "1.0.0",
+  "description": "Test repository for governance-seatbelt artifact generation",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts",
+    "generate": "bun run index.ts",
+    "clean": "rm -rf reports frontend/public/simulation-results.json"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.3",
+    "md-to-pdf": "^5.2.4",
+    "rehype": "^13.0.2",
+    "rehype-sanitize": "^6.0.0",
+    "remark": "^15.0.1"
+  }
+}

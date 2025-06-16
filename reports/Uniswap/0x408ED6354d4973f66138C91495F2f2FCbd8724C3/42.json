@@ -1,0 +1,66 @@
+{
+  "title": "Uniswap Proposal 42: Protocol Upgrade",
+  "proposalText": "This proposal aims to upgrade the Uniswap protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
+  "status": "error",
+  "summary": "Critical issues found. Do not execute without addressing concerns.",
+  "checks": [
+    {
+      "name": "State Change Analysis",
+      "status": "success",
+      "description": "All state changes look reasonable"
+    },
+    {
+      "name": "Access Control Check",
+      "status": "warning",
+      "description": "Some functions require elevated permissions"
+    }
+  ],
+  "stateChanges": [
+    {
+      "address": "0x7539c5f5cbd27",
+      "slot": "0xb0701df7b17bf",
+      "before": "0x1f10773bbae8d8",
+      "after": "0x596c01afbd51",
+      "description": "Storage slot 1 updated"
+    },
+    {
+      "address": "0x4e5a8306e23c2",
+      "slot": "0xb687c1d62ad77",
+      "before": "0xdb2abe583661d8",
+      "after": "0xd260ff9fefad18",
+      "description": "Storage slot 2 updated"
+    },
+    {
+      "address": "0xe94326c73b0da8",
+      "slot": "0xc4b01fd9313f68",
+      "before": "0x23daff71412f8",
+      "after": "0xb07339a6772eb",
+      "description": "Storage slot 3 updated"
+    }
+  ],
+  "events": [
+    {
+      "address": "0xabd33db7a46bc8",
+      "topics": [
+        "0xf4130c6bfd08c",
+        "0x954a547c89beb8"
+      ],
+      "data": "0x92d5aadd936218",
+      "decoded": {
+        "name": "ProposalExecuted",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x93ef3f1f3cb7e8",
+          "to": "0xb7acd8f7a129e",
+          "value": "69069"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "blockNumber": "18083033",
+    "timestamp": "2025-06-16T16:44:32.611Z",
+    "proposalId": "42",
+    "proposer": "0x4ed8f629ce594"
+  }
+}

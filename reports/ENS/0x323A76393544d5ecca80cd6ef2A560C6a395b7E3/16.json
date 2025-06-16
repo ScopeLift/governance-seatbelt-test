@@ -1,0 +1,91 @@
+{
+  "title": "ENS Proposal 16: Protocol Upgrade",
+  "proposalText": "This proposal aims to upgrade the ENS protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
+  "status": "warning",
+  "summary": "Some warnings detected. Please review before execution.",
+  "checks": [
+    {
+      "name": "State Change Analysis",
+      "status": "success",
+      "description": "All state changes look reasonable"
+    },
+    {
+      "name": "Access Control Check",
+      "status": "warning",
+      "description": "Some functions require elevated permissions"
+    },
+    {
+      "name": "Gas Usage Analysis",
+      "status": "success",
+      "description": "Gas usage within expected bounds"
+    },
+    {
+      "name": "External Call Safety",
+      "status": "error",
+      "description": "Detected potentially unsafe external call"
+    },
+    {
+      "name": "Token Balance Check",
+      "status": "success",
+      "description": "Token balances preserved correctly"
+    }
+  ],
+  "stateChanges": [
+    {
+      "address": "0xa1e18d15f007d",
+      "slot": "0x4fe358f9e47908",
+      "before": "0x815fb4544a395",
+      "after": "0xaf32ae9f021f28",
+      "description": "Storage slot 1 updated"
+    },
+    {
+      "address": "0xe3589f28da3808",
+      "slot": "0x5ec7477ecfee88",
+      "before": "0xe63bd7255ff3f",
+      "after": "0x4689dc3465a6c8",
+      "description": "Storage slot 2 updated"
+    }
+  ],
+  "events": [
+    {
+      "address": "0x70b709067be158",
+      "topics": [
+        "0xd1a9c70792e4e",
+        "0xdccfb0641d9f58"
+      ],
+      "data": "0x8ef4cabca1e2e",
+      "decoded": {
+        "name": "Transfer",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x0e59d6c4f4719",
+          "to": "0xa191f1b2a981",
+          "value": "962686"
+        }
+      }
+    },
+    {
+      "address": "0xd7ba106865be7",
+      "topics": [
+        "0x5f2aa006135b8",
+        "0xd397ba8af12da8"
+      ],
+      "data": "0x70d941ce78e088",
+      "decoded": {
+        "name": "Approval",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0xdb011d9779e428",
+          "to": "0x139c1a93dee28",
+          "value": "517325"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "blockNumber": "18076956",
+    "timestamp": "2025-06-16T16:44:42.785Z",
+    "proposalId": "16",
+    "proposer": "0xccb41b43f4c978"
+  }
+}

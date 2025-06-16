@@ -1,0 +1,80 @@
+{
+  "title": "Compound Proposal 121: Protocol Upgrade",
+  "proposalText": "This proposal aims to upgrade the Compound protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
+  "status": "success",
+  "summary": "All checks passed successfully. The proposal appears safe to execute.",
+  "checks": [
+    {
+      "name": "State Change Analysis",
+      "status": "success",
+      "description": "All state changes look reasonable"
+    },
+    {
+      "name": "Access Control Check",
+      "status": "warning",
+      "description": "Some functions require elevated permissions"
+    }
+  ],
+  "stateChanges": [
+    {
+      "address": "0x1975e1e24b7818",
+      "slot": "0x7144d43b2730c",
+      "before": "0x2a3da4071b8c",
+      "after": "0x5c774a87faf658",
+      "description": "Storage slot 1 updated"
+    },
+    {
+      "address": "0x783ac0d9463a18",
+      "slot": "0xd7e1725a96c708",
+      "before": "0xe3a6ad7ee7ec1",
+      "after": "0x29019c647ef888",
+      "description": "Storage slot 2 updated"
+    },
+    {
+      "address": "0x0863ce51fa4d88",
+      "slot": "0x1ec97a7cac98d8",
+      "before": "0xdead63c4bb7c28",
+      "after": "0x0318499c53c4b",
+      "description": "Storage slot 3 updated"
+    },
+    {
+      "address": "0x5c614170b16758",
+      "slot": "0x0b17eb0c225368",
+      "before": "0x6db2c8f7197258",
+      "after": "0xdb969d3ce3f15",
+      "description": "Storage slot 4 updated"
+    },
+    {
+      "address": "0xc002355b011cf8",
+      "slot": "0x459b314bd8ceb8",
+      "before": "0x4fabf4ff0392c8",
+      "after": "0x2a54742ecd30b8",
+      "description": "Storage slot 5 updated"
+    }
+  ],
+  "events": [
+    {
+      "address": "0xf43ba8f0e4b1b8",
+      "topics": [
+        "0x97f6c261aa2038",
+        "0xc5d1a88eab361"
+      ],
+      "data": "0x7d6eec719bbfa8",
+      "decoded": {
+        "name": "ProposalExecuted",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0xc802e952416878",
+          "to": "0x48d2ad266a0598",
+          "value": "651092"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "blockNumber": "18069687",
+    "timestamp": "2025-06-16T16:44:38.561Z",
+    "proposalId": "121",
+    "proposer": "0xde421b52f69af8"
+  }
+}

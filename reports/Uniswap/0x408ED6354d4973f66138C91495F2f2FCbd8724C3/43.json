@@ -1,0 +1,84 @@
+{
+  "title": "Uniswap Proposal 43: Protocol Upgrade",
+  "proposalText": "This proposal aims to upgrade the Uniswap protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
+  "status": "success",
+  "summary": "All checks passed successfully. The proposal appears safe to execute.",
+  "checks": [
+    {
+      "name": "State Change Analysis",
+      "status": "success",
+      "description": "All state changes look reasonable"
+    },
+    {
+      "name": "Access Control Check",
+      "status": "warning",
+      "description": "Some functions require elevated permissions"
+    },
+    {
+      "name": "Gas Usage Analysis",
+      "status": "success",
+      "description": "Gas usage within expected bounds"
+    },
+    {
+      "name": "External Call Safety",
+      "status": "error",
+      "description": "Detected potentially unsafe external call"
+    },
+    {
+      "name": "Token Balance Check",
+      "status": "success",
+      "description": "Token balances preserved correctly"
+    }
+  ],
+  "stateChanges": [
+    {
+      "address": "0xae2d3f4b24ca4",
+      "slot": "0x894656ef723868",
+      "before": "0x80bad6dc4d9a78",
+      "after": "0x709da4992fd28",
+      "description": "Storage slot 1 updated"
+    }
+  ],
+  "events": [
+    {
+      "address": "0xa73045f629ef98",
+      "topics": [
+        "0xfa11a380d79f28",
+        "0x5e7362c9b07cd8"
+      ],
+      "data": "0x6a7c6741273fd8",
+      "decoded": {
+        "name": "Transfer",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x59ce3a754a7c78",
+          "to": "0xabefffa66b2608",
+          "value": "975051"
+        }
+      }
+    },
+    {
+      "address": "0x4ff4ca27cc8ad",
+      "topics": [
+        "0xf2478c41991288",
+        "0x014a8af8fa481"
+      ],
+      "data": "0x2ede115ce1c85",
+      "decoded": {
+        "name": "Approval",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0xf1ffdf261890d",
+          "to": "0xba79846e608a78",
+          "value": "71328"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "blockNumber": "18056795",
+    "timestamp": "2025-06-16T16:44:34.354Z",
+    "proposalId": "43",
+    "proposer": "0xf0e961e673d67"
+  }
+}

@@ -1,0 +1,68 @@
+name: Governance Checks
+
+on:
+  schedule:
+    # Run every 3 hours, matching the real governance-seatbelt
+    - cron: '0 */3 * * *'
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  governance-checks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+
+    - name: Install dependencies
+      run: bun install
+
+    - name: Generate governance reports
+      run: bun run index.ts
+
+    - name: Upload Uniswap artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Uniswap
+        path: reports/Uniswap/0x408ED6354d4973f66138C91495F2f2FCbd8724C3/
+
+    - name: Upload Compound artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Compound
+        path: reports/Compound/0xc0Da02939E1441F497fd74F78cE7Decb17B66529/
+
+    - name: Upload ENS artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: ENS
+        path: reports/ENS/0x323A76393544d5ecca80cd6ef2A560C6a395b7E3/
+
+    - name: Upload Frontend Data
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: frontend-data
+        path: frontend/public/simulation-results.json
+
+    - name: List generated files
+      if: always()
+      run: |
+        echo "Generated report files:"
+        find reports -type f | sort
+        echo ""
+        echo "Frontend data:"
+        ls -la frontend/public/
+        echo ""
+        echo "Total file count:"
+        find reports -type f | wc -l

@@ -1,0 +1,98 @@
+{
+  "title": "Compound Proposal 122: Protocol Upgrade",
+  "proposalText": "This proposal aims to upgrade the Compound protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
+  "status": "success",
+  "summary": "All checks passed successfully. The proposal appears safe to execute.",
+  "checks": [
+    {
+      "name": "State Change Analysis",
+      "status": "success",
+      "description": "All state changes look reasonable"
+    },
+    {
+      "name": "Access Control Check",
+      "status": "warning",
+      "description": "Some functions require elevated permissions"
+    },
+    {
+      "name": "Gas Usage Analysis",
+      "status": "success",
+      "description": "Gas usage within expected bounds"
+    },
+    {
+      "name": "External Call Safety",
+      "status": "error",
+      "description": "Detected potentially unsafe external call"
+    },
+    {
+      "name": "Token Balance Check",
+      "status": "success",
+      "description": "Token balances preserved correctly"
+    }
+  ],
+  "stateChanges": [
+    {
+      "address": "0xa3e618463ef7e",
+      "slot": "0x7353cef91dd0a8",
+      "before": "0x0526d0ef762698",
+      "after": "0x3412c6ee0d90f",
+      "description": "Storage slot 1 updated"
+    },
+    {
+      "address": "0xc5d8a43ebe59f8",
+      "slot": "0x0a4aaf7fda398",
+      "before": "0x64764d4fd12bc8",
+      "after": "0x19c52b1a0de038",
+      "description": "Storage slot 2 updated"
+    },
+    {
+      "address": "0x1e1cb658ec7ca",
+      "slot": "0x8d31b3fe892fe",
+      "before": "0x648bf5fa23dd6",
+      "after": "0x142b7670f7af5",
+      "description": "Storage slot 3 updated"
+    }
+  ],
+  "events": [
+    {
+      "address": "0x45d2a6f5b8961",
+      "topics": [
+        "0xed317b8f9a7bd8",
+        "0x239986a5a10c48"
+      ],
+      "data": "0x5dea59103a31a",
+      "decoded": {
+        "name": "Approval",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x69422628977ff8",
+          "to": "0x844ad8d123da2",
+          "value": "183361"
+        }
+      }
+    },
+    {
+      "address": "0x34ca668e835db8",
+      "topics": [
+        "0x628c15853658c8",
+        "0xf4a73270026b3"
+      ],
+      "data": "0x870c48a2a3704",
+      "decoded": {
+        "name": "ProposalExecuted",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x03f00c05fff4b",
+          "to": "0xca18fb3ed2fc3",
+          "value": "758575"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "blockNumber": "18009204",
+    "timestamp": "2025-06-16T16:44:40.000Z",
+    "proposalId": "122",
+    "proposer": "0x900eb31235c62"
+  }
+}

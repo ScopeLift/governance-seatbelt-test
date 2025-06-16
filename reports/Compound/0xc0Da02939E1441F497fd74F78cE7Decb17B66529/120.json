@@ -1,0 +1,52 @@
+{
+  "title": "Compound Proposal 120: Protocol Upgrade",
+  "proposalText": "This proposal aims to upgrade the Compound protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
+  "status": "success",
+  "summary": "All checks passed successfully. The proposal appears safe to execute.",
+  "checks": [
+    {
+      "name": "State Change Analysis",
+      "status": "success",
+      "description": "All state changes look reasonable"
+    },
+    {
+      "name": "Access Control Check",
+      "status": "warning",
+      "description": "Some functions require elevated permissions"
+    }
+  ],
+  "stateChanges": [
+    {
+      "address": "0x4ab3c0ec4c8e28",
+      "slot": "0x9c01a239989d98",
+      "before": "0xc97c24874dae08",
+      "after": "0x29363e9a65f22",
+      "description": "Storage slot 1 updated"
+    }
+  ],
+  "events": [
+    {
+      "address": "0xbd9617b95f0c",
+      "topics": [
+        "0x28214d188a7f",
+        "0x4951223dcacd3"
+      ],
+      "data": "0x6d76aa32ebce4",
+      "decoded": {
+        "name": "ProposalExecuted",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x83c67562e1a148",
+          "to": "0x037e6c816d1b2",
+          "value": "713792"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "blockNumber": "18070543",
+    "timestamp": "2025-06-16T16:44:37.170Z",
+    "proposalId": "120",
+    "proposer": "0x3f0aa474842a9"
+  }
+}

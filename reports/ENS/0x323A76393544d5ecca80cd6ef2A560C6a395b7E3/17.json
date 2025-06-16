@@ -1,0 +1,119 @@
+{
+  "title": "ENS Proposal 17: Protocol Upgrade",
+  "proposalText": "This proposal aims to upgrade the ENS protocol with new features and bug fixes. The proposal includes contract upgrades, parameter changes, and treasury allocations.",
+  "status": "error",
+  "summary": "Critical issues found. Do not execute without addressing concerns.",
+  "checks": [
+    {
+      "name": "State Change Analysis",
+      "status": "success",
+      "description": "All state changes look reasonable"
+    },
+    {
+      "name": "Access Control Check",
+      "status": "warning",
+      "description": "Some functions require elevated permissions"
+    },
+    {
+      "name": "Gas Usage Analysis",
+      "status": "success",
+      "description": "Gas usage within expected bounds"
+    }
+  ],
+  "stateChanges": [
+    {
+      "address": "0x5aa968c520fec8",
+      "slot": "0x3e38129f74e1c8",
+      "before": "0x486c3623b34698",
+      "after": "0xb90b2752fa9a3",
+      "description": "Storage slot 1 updated"
+    },
+    {
+      "address": "0x803a0a6463d398",
+      "slot": "0x702b2d7640b9a",
+      "before": "0x416f0ea3a2903",
+      "after": "0x08516114976ed8",
+      "description": "Storage slot 2 updated"
+    },
+    {
+      "address": "0x217779649f6708",
+      "slot": "0x92e5bf8899e538",
+      "before": "0x1fcedb796489b",
+      "after": "0xdaf7577b177de8",
+      "description": "Storage slot 3 updated"
+    },
+    {
+      "address": "0x153d9cd800e59",
+      "slot": "0xf4783791c856c",
+      "before": "0x4c86d2f2dd7788",
+      "after": "0x305d145a512768",
+      "description": "Storage slot 4 updated"
+    },
+    {
+      "address": "0x6ac9e78b2ae8c8",
+      "slot": "0x47f8a5d56c5aa8",
+      "before": "0xa60785ba1d2998",
+      "after": "0x71e0406eb03228",
+      "description": "Storage slot 5 updated"
+    }
+  ],
+  "events": [
+    {
+      "address": "0x7b26d45c456b4",
+      "topics": [
+        "0x4aaa248b6c4f38",
+        "0xfec07877966d48"
+      ],
+      "data": "0x0958443a709b2",
+      "decoded": {
+        "name": "Transfer",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x6efb235fbd201",
+          "to": "0x38b444e78347c8",
+          "value": "980909"
+        }
+      }
+    },
+    {
+      "address": "0x54a9181af31ec",
+      "topics": [
+        "0x2a2ee8d44b1528",
+        "0xc4c59a4a08e8d8"
+      ],
+      "data": "0xa1db3fb8ba8fe",
+      "decoded": {
+        "name": "ProposalExecuted",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0x0e13e92a443ff8",
+          "to": "0x46ea0a8eb745f",
+          "value": "377653"
+        }
+      }
+    },
+    {
+      "address": "0xd2742bc25ca9d",
+      "topics": [
+        "0x5846a112bee6a8",
+        "0xa762ead53fbe"
+      ],
+      "data": "0xc93295086f615",
+      "decoded": {
+        "name": "Approval",
+        "signature": "Transfer(address,address,uint256)",
+        "args": {
+          "from": "0xaf41b50316821",
+          "to": "0xfc6ac11c078e88",
+          "value": "802426"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "blockNumber": "18095770",
+    "timestamp": "2025-06-16T16:44:44.180Z",
+    "proposalId": "17",
+    "proposer": "0xd79996f6a0691"
+  }
+}
