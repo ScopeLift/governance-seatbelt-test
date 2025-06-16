@@ -23,14 +23,43 @@ const TEST_DAOS = [
 ];
 
 function generateRandomChecks(): SimulationCheck[] {
+  const slitherReport = `Slither report for Uni (Uniswap) at \`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984\`
+\`\`\`
+'solc --standard-json --allow-paths /home/runner/work/governance-seatbelt/governance-seatbelt' running
+Warning: crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol:6:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+
+INFO:Detectors:
+Uni._writeCheckpoint(address,uint32,uint96,uint96) (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#543-554) uses a dangerous strict equality:
+\t- nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#546)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+
+INFO:Detectors:
+Uni.constructor(address,address,uint256).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#272) lacks a zero-check on :
+\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#277)
+Uni.setMinter(address).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#286) lacks a zero-check on :
+\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#289)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+
+INFO:Detectors:
+Version constraint ^0.5.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.5.16 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+INFO:Slither:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 analyzed (2 contracts with 100 detectors), 8 result(s) found
+\`\`\``;
+
   const checkTypes = [
     {
       title: 'Reports all state changes from the proposal',
       status: 'passed' as const,
-      details: '**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c"` to `"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c"`',
+      details: '**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c"` to `"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c"`\n\n**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `"0x000000000000000000000000000000000000000000006aae30f51b48b191c400"` to `"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400"`',
       info: [
         'KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`',
-        '    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c"` to `"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c"`'
+        '    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c"` to `"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c"`',
+        'Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`',
+        '    Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `"0x000000000000000000000000000000000000000000006aae30f51b48b191c400"` to `"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400"`'
       ]
     },
     {
@@ -42,6 +71,17 @@ function generateRandomChecks(): SimulationCheck[] {
       ]
     },
     {
+      title: 'Reports all events emitted from the proposal',
+      status: 'passed' as const,
+      details: '**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n\n**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`',
+      info: [
+        'Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`',
+        '    `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`',
+        'KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`',
+        '    `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`'
+      ]
+    },
+    {
       title: 'Check all targets are verified on Etherscan',
       status: 'passed' as const,
       details: '**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)',
@@ -50,16 +90,49 @@ function generateRandomChecks(): SimulationCheck[] {
       ]
     },
     {
+      title: 'Check all touched contracts are verified on Etherscan',
+      status: 'passed' as const,
+      details: '**Info**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)',
+      info: [
+        '[`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)',
+        '[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)',
+        '[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)'
+      ]
+    },
+    {
+      title: 'Check all targets do not contain selfdestruct',
+      status: 'passed' as const,
+      details: '**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)',
+      info: [
+        '[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)'
+      ]
+    },
+    {
       title: 'Check all touched contracts do not contain selfdestruct',
       status: 'warning' as const,
-      details: '**Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)',
+      details: '**Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)',
       info: [
-        '[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)'
+        '[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)',
+        '[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)'
       ]
+    },
+    {
+      title: 'Reports on whether the caller needs to send ETH with the call',
+      status: 'passed' as const,
+      details: '**Info**: No ETH is required to be sent by the account that executes this proposal.',
+      info: [
+        'No ETH is required to be sent by the account that executes this proposal.'
+      ]
+    },
+    {
+      title: 'Slither static analysis',
+      status: 'passed' as const,
+      details: slitherReport,
+      info: [slitherReport]
     }
   ];
   
-  return checkTypes.slice(0, Math.floor(Math.random() * 3) + 2);
+  return checkTypes.slice(0, Math.floor(Math.random() * 4) + 6);
 }
 
 function generateRandomStateChanges(): SimulationStateChange[] {

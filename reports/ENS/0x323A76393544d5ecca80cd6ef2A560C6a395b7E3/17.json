@@ -1,16 +1,18 @@
 {
-  "title": "Emergency Action Proposal",
-  "proposalText": "# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market.",
+  "title": "Scaling V4 and Supporting Unichain",
+  "proposalText": "# Scaling V4 and Supporting Unichain\nPGOV is submitting the proposal on GFX Labs' behalf because GFX no longer has sufficient voting power to submit.\n\nGFX Labs proposes that the ENS DAO allocate funding to support the integration of new protocol features and enhance the ecosystem's capabilities.",
   "status": "success",
-  "summary": "Simulation completed successfully for proposal: \"Emergency Action Proposal\".",
+  "summary": "Simulation completed successfully for proposal: \"Scaling V4 and Supporting Unichain\".",
   "checks": [
     {
       "title": "Reports all state changes from the proposal",
       "status": "passed",
-      "details": "**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`",
+      "details": "**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`\n\n**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`",
       "info": [
         "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
-        "    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`"
+        "    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`",
+        "Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`",
+        "    Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`"
       ]
     },
     {
@@ -22,6 +24,17 @@
       ]
     },
     {
+      "title": "Reports all events emitted from the proposal",
+      "status": "passed",
+      "details": "**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n\n**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`",
+      "info": [
+        "Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`",
+        "    `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`",
+        "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
+        "    `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`"
+      ]
+    },
+    {
       "title": "Check all targets are verified on Etherscan",
       "status": "passed",
       "details": "**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)",
@@ -30,35 +43,59 @@
       ]
     },
     {
-      "title": "Check all touched contracts do not contain selfdestruct",
-      "status": "warning",
-      "details": "**Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)",
+      "title": "Check all touched contracts are verified on Etherscan",
+      "status": "passed",
+      "details": "**Info**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)",
       "info": [
-        "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)"
+        "[`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)",
+        "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)",
+        "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)"
+      ]
+    },
+    {
+      "title": "Check all targets do not contain selfdestruct",
+      "status": "passed",
+      "details": "**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)",
+      "info": [
+        "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
       ]
     }
   ],
   "stateChanges": [
     {
-      "contract": "GovernorBravo",
-      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0xa9ee76214bb3a8",
-      "oldValue": "0x46fdd5e01ffdd",
-      "newValue": "0x78d0051e8027"
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0x40a46718f974a8",
+      "oldValue": "0x2669c010d5faa8",
+      "newValue": "0xc0b68ee557b398"
     },
     {
-      "contract": "KeeperRegistry",
-      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
-      "key": "0x5f462aca754ae8",
-      "oldValue": "0x1c8487cf027748",
-      "newValue": "0xb5fef09545817"
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0x500e244db08d08",
+      "oldValue": "0x85f0824a56454",
+      "newValue": "0xb22d7c741dde98"
+    },
+    {
+      "contract": "GovernorBravo",
+      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "key": "0x865de13acbea78",
+      "oldValue": "0x5f73e035da4c08",
+      "newValue": "0x595981605d4a"
+    },
+    {
+      "contract": "GovernorBravo",
+      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "key": "0xf5e1faea271bb8",
+      "oldValue": "0xb5277d2b71d448",
+      "newValue": "0x67aebaa1dd37f"
     }
   ],
   "events": [],
   "metadata": {
-    "blockNumber": "22046503",
-    "timestamp": "1750064282",
+    "blockNumber": "22429988",
+    "timestamp": "1750018710",
     "proposalId": "17",
-    "proposer": "0xe337f5a3557d5"
+    "proposer": "0xe170031174149"
   }
 }
