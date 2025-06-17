@@ -1,8 +1,8 @@
 {
-  "title": "Treasury Allocation Proposal",
+  "title": "Scaling V4 and Supporting Unichain",
   "proposalText": "# Treasury Allocation Proposal\nThe ENS community proposes allocating treasury funds for strategic initiatives that will drive long-term growth and adoption.",
-  "status": "warning",
-  "summary": "Simulation completed with warnings for proposal: \"Treasury Allocation Proposal\".",
+  "status": "error",
+  "summary": "Simulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".",
   "checks": [
     {
       "title": "Reports all state changes from the proposal",
@@ -76,43 +76,49 @@
       "info": [
         "No ETH is required to be sent by the account that executes this proposal."
       ]
+    },
+    {
+      "title": "Slither static analysis",
+      "status": "passed",
+      "details": "Slither report for Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n```\n'solc --standard-json --allow-paths /home/runner/work/governance-seatbelt/governance-seatbelt' running\nWarning: crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol:6:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.\npragma experimental ABIEncoderV2;\n^-------------------------------^\n\nINFO:Detectors:\nUni._writeCheckpoint(address,uint32,uint96,uint96) (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#543-554) uses a dangerous strict equality:\n\t- nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#546)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities\n\nINFO:Detectors:\nUni.constructor(address,address,uint256).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#272) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#277)\nUni.setMinter(address).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#286) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#289)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation\n\nINFO:Detectors:\nVersion constraint ^0.5.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\nsolc-0.5.16 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity\n\nINFO:Slither:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 analyzed (2 contracts with 100 detectors), 8 result(s) found\n```",
+      "info": [
+        "Slither report for Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n```\n'solc --standard-json --allow-paths /home/runner/work/governance-seatbelt/governance-seatbelt' running\nWarning: crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol:6:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.\npragma experimental ABIEncoderV2;\n^-------------------------------^\n\nINFO:Detectors:\nUni._writeCheckpoint(address,uint32,uint96,uint96) (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#543-554) uses a dangerous strict equality:\n\t- nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#546)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities\n\nINFO:Detectors:\nUni.constructor(address,address,uint256).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#272) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#277)\nUni.setMinter(address).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#286) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#289)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation\n\nINFO:Detectors:\nVersion constraint ^0.5.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\nsolc-0.5.16 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity\n\nINFO:Slither:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 analyzed (2 contracts with 100 detectors), 8 result(s) found\n```"
+      ]
     }
   ],
   "stateChanges": [
     {
-      "contract": "KeeperRegistry",
-      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
-      "key": "0xb3060762c90d78",
-      "oldValue": "0xf38e7901f0ff",
-      "newValue": "0xeae6294ac401a"
-    },
-    {
       "contract": "Uni (Uniswap)",
       "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x4e307b600dbef",
-      "oldValue": "0xb33fa05e6997e",
-      "newValue": "0x34ff8d13ba8fe"
+      "key": "0x0471c042378ef8",
+      "oldValue": "0xad1b9a5442f1a",
+      "newValue": "0x1170dd7049ddd"
     },
     {
-      "contract": "Uni (Uniswap)",
-      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0xae5f1eafe63468",
-      "oldValue": "0x569117459162f8",
-      "newValue": "0xaeccae95236c9"
+      "contract": "GovernorBravo",
+      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "key": "0xbd266da37493b",
+      "oldValue": "0xcaf6e79316f708",
+      "newValue": "0x3cc1df84e5e158"
     },
     {
-      "contract": "Uni (Uniswap)",
-      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x41850f4684a7f8",
-      "oldValue": "0x88216a4c1c395",
-      "newValue": "0xbd8b7cbf6d19"
+      "contract": "GovernorBravo",
+      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "key": "0x0676bcfcd2bbe",
+      "oldValue": "0x991b7b2ee51638",
+      "newValue": "0x10c081b904fb58"
     }
   ],
   "events": [],
   "metadata": {
-    "blockNumber": "22031364",
-    "timestamp": "1750061584",
     "proposalId": "15",
-    "proposer": "0xace5efb6a61e88"
+    "proposer": "0x445b2f26052c48",
+    "governorAddress": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "executor": "0x0c017010574a78",
+    "simulationBlockNumber": "22025221",
+    "simulationTimestamp": "1750202273",
+    "proposalCreatedAtBlockNumber": "22041221",
+    "proposalCreatedAtTimestamp": "1750111852",
+    "proposalExecutedAtTimestamp": "1750170156"
   }
 }

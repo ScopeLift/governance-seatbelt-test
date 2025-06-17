@@ -68,51 +68,42 @@
         "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)",
         "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
       ]
-    },
-    {
-      "title": "Reports on whether the caller needs to send ETH with the call",
-      "status": "passed",
-      "details": "**Info**: No ETH is required to be sent by the account that executes this proposal.",
-      "info": [
-        "No ETH is required to be sent by the account that executes this proposal."
-      ]
     }
   ],
   "stateChanges": [
     {
-      "contract": "KeeperRegistry",
-      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
-      "key": "0x4c135d1e90021",
-      "oldValue": "0x3f5825972e3e7",
-      "newValue": "0x90c81636322d4"
-    },
-    {
-      "contract": "KeeperRegistry",
-      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
-      "key": "0xb01a7fd2d0755",
-      "oldValue": "0xdcb5f0ca68bdd8",
-      "newValue": "0xde194f6b7921f"
-    },
-    {
       "contract": "GovernorBravo",
       "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0x65f01781e69e28",
-      "oldValue": "0x12fdb3166ac4d",
-      "newValue": "0x408d7d17455d78"
+      "key": "0x980296e09320b8",
+      "oldValue": "0xcca5a899ce17e8",
+      "newValue": "0xa44ce8e552d22"
     },
     {
-      "contract": "GovernorBravo",
-      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0xf3eb69207d963",
-      "oldValue": "0xaf01f0c0a810f8",
-      "newValue": "0x89232958dcb24"
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0x78356c520d993",
+      "oldValue": "0xe01fb978b2438",
+      "newValue": "0x925797eb0c5c4"
+    },
+    {
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0xe2095162257018",
+      "oldValue": "0x81169f9ce2cd2",
+      "newValue": "0xef2af224d63cb"
     }
   ],
   "events": [],
   "metadata": {
-    "blockNumber": "22133344",
-    "timestamp": "1750091952",
     "proposalId": "44",
-    "proposer": "0xae28ef931306f8"
+    "proposer": "0x3ff9b2c920cc18",
+    "governorAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+    "executor": "0x1aba7309d85e08",
+    "simulationBlockNumber": "22274154",
+    "simulationTimestamp": "1750202267",
+    "proposalCreatedAtBlockNumber": "22386559",
+    "proposalCreatedAtTimestamp": "1750121680",
+    "proposalExecutedAtBlockNumber": "22176746",
+    "proposalExecutedAtTimestamp": "1750176653"
   }
 }

@@ -1,0 +1,138 @@
+{
+  "proposalData": {
+    "id": "17",
+    "governorAddress": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "targets": [
+      "0xc9c2047eb7a56"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "upgrade(address)"
+    ],
+    "calldatas": [
+      "0x44ac1d969f32f"
+    ],
+    "description": "# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market."
+  },
+  "report": {
+    "status": "error",
+    "summary": "Simulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".",
+    "markdownReport": "# Scaling V4 and Supporting Unichain\n\n## Summary\nSimulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".\n\n## Status: ERROR\n\n## Proposal Description\n# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market.\n\n## Checks Performed\n\n### Reports all state changes from the proposal\n- **Status**: passed\n- **Details**: **Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`\n\n**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`\n- **Info**: \n  - KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n  -     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`\n  - Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n  -     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`\n\n### Decodes target calldata into a human-readable format\n- **Status**: passed\n- **Details**: **Info**: `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)\n- **Info**: \n  - `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)\n\n### Reports all events emitted from the proposal\n- **Status**: passed\n- **Details**: **Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n\n**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`\n- **Info**: \n  - Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n  -     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n  - KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n  -     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`\n\n### Check all targets are verified on Etherscan\n- **Status**: passed\n- **Details**: **Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n- **Info**: \n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n\n### Check all touched contracts are verified on Etherscan\n- **Status**: passed\n- **Details**: **Info**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n- **Info**: \n  - [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n  - [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n\n### Check all targets do not contain selfdestruct\n- **Status**: passed\n- **Details**: **Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n- **Info**: \n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n\n### Check all touched contracts do not contain selfdestruct\n- **Status**: warning\n- **Details**: **Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n- **Info**: \n  - [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n\n\n## State Changes\n\n### Change 1\n- **Contract**: Uni (Uniswap)\n- **Address**: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984\n- **Key**: 0x2b97bb60c818c\n- **Old Value**: 0xd1ed772eeb637\n- **New Value**: 0xd6b617145d8988\n\n### Change 2\n- **Contract**: KeeperRegistry\n- **Address**: 0x02777053d6764996e594c3E88AF1D58D5363a2e6\n- **Key**: 0xb7e4ef944857c8\n- **Old Value**: 0x18b17b5fb5a928\n- **New Value**: 0x5f83b330f307a\n\n### Change 3\n- **Contract**: Uni (Uniswap)\n- **Address**: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984\n- **Key**: 0xc6d93eb33daf38\n- **Old Value**: 0x0258e84dfb764\n- **New Value**: 0x995e276b22d74\n\n### Change 4\n- **Contract**: Uni (Uniswap)\n- **Address**: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984\n- **Key**: 0x8cfaf9c8d00f98\n- **Old Value**: 0x0000bd153d43f8\n- **New Value**: 0xc9c89199e9e83\n\n\n## Events Emitted\n\n\n\n## Metadata\n- **Proposal ID**: 17\n- **Proposer**: 0xcd71ff438db5a8\n- **Governor Address**: 0x323A76393544d5ecca80cd6ef2A560C6a395b7E3\n- **Executor**: 0xb5318e4180dc98\n- **Simulation Block Number**: 22075980\n- **Simulation Timestamp**: 1750202276\n- **Proposal Created At Block**: 22006815\n- **Proposal Created At Timestamp**: 1750199967\n\n\n\n---\n*Generated by governance-seatbelt-test*\n",
+    "structuredReport": {
+      "title": "Scaling V4 and Supporting Unichain",
+      "proposalText": "# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market.",
+      "status": "error",
+      "summary": "Simulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".",
+      "checks": [
+        {
+          "title": "Reports all state changes from the proposal",
+          "status": "passed",
+          "details": "**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`\n\n**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`",
+          "info": [
+            "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
+            "    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`",
+            "Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`",
+            "    Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`"
+          ]
+        },
+        {
+          "title": "Decodes target calldata into a human-readable format",
+          "status": "passed",
+          "details": "**Info**: `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)",
+          "info": [
+            "`0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)"
+          ]
+        },
+        {
+          "title": "Reports all events emitted from the proposal",
+          "status": "passed",
+          "details": "**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n\n**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`",
+          "info": [
+            "Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`",
+            "    `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`",
+            "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
+            "    `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`"
+          ]
+        },
+        {
+          "title": "Check all targets are verified on Etherscan",
+          "status": "passed",
+          "details": "**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)",
+          "info": [
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)"
+          ]
+        },
+        {
+          "title": "Check all touched contracts are verified on Etherscan",
+          "status": "passed",
+          "details": "**Info**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)",
+          "info": [
+            "[`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)",
+            "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)",
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)"
+          ]
+        },
+        {
+          "title": "Check all targets do not contain selfdestruct",
+          "status": "passed",
+          "details": "**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)",
+          "info": [
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
+          ]
+        },
+        {
+          "title": "Check all touched contracts do not contain selfdestruct",
+          "status": "warning",
+          "details": "**Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)",
+          "info": [
+            "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)",
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
+          ]
+        }
+      ],
+      "stateChanges": [
+        {
+          "contract": "Uni (Uniswap)",
+          "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+          "key": "0x2b97bb60c818c",
+          "oldValue": "0xd1ed772eeb637",
+          "newValue": "0xd6b617145d8988"
+        },
+        {
+          "contract": "KeeperRegistry",
+          "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+          "key": "0xb7e4ef944857c8",
+          "oldValue": "0x18b17b5fb5a928",
+          "newValue": "0x5f83b330f307a"
+        },
+        {
+          "contract": "Uni (Uniswap)",
+          "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+          "key": "0xc6d93eb33daf38",
+          "oldValue": "0x0258e84dfb764",
+          "newValue": "0x995e276b22d74"
+        },
+        {
+          "contract": "Uni (Uniswap)",
+          "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+          "key": "0x8cfaf9c8d00f98",
+          "oldValue": "0x0000bd153d43f8",
+          "newValue": "0xc9c89199e9e83"
+        }
+      ],
+      "events": [],
+      "metadata": {
+        "proposalId": "17",
+        "proposer": "0xcd71ff438db5a8",
+        "governorAddress": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+        "executor": "0xb5318e4180dc98",
+        "simulationBlockNumber": "22075980",
+        "simulationTimestamp": "1750202276",
+        "proposalCreatedAtBlockNumber": "22006815",
+        "proposalCreatedAtTimestamp": "1750199967"
+      }
+    }
+  }
+}

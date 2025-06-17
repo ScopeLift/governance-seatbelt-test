@@ -1,8 +1,8 @@
 {
   "title": "Scaling V4 and Supporting Unichain",
-  "proposalText": "# Scaling V4 and Supporting Unichain\nPGOV is submitting the proposal on GFX Labs' behalf because GFX no longer has sufficient voting power to submit.\n\nGFX Labs proposes that the ENS DAO allocate funding to support the integration of new protocol features and enhance the ecosystem's capabilities.",
-  "status": "success",
-  "summary": "Simulation completed successfully for proposal: \"Scaling V4 and Supporting Unichain\".",
+  "proposalText": "# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market.",
+  "status": "error",
+  "summary": "Simulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".",
   "checks": [
     {
       "title": "Reports all state changes from the proposal",
@@ -59,43 +59,56 @@
       "info": [
         "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
       ]
+    },
+    {
+      "title": "Check all touched contracts do not contain selfdestruct",
+      "status": "warning",
+      "details": "**Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)",
+      "info": [
+        "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)",
+        "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
+      ]
     }
   ],
   "stateChanges": [
     {
       "contract": "Uni (Uniswap)",
       "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x40a46718f974a8",
-      "oldValue": "0x2669c010d5faa8",
-      "newValue": "0xc0b68ee557b398"
+      "key": "0x2b97bb60c818c",
+      "oldValue": "0xd1ed772eeb637",
+      "newValue": "0xd6b617145d8988"
+    },
+    {
+      "contract": "KeeperRegistry",
+      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+      "key": "0xb7e4ef944857c8",
+      "oldValue": "0x18b17b5fb5a928",
+      "newValue": "0x5f83b330f307a"
     },
     {
       "contract": "Uni (Uniswap)",
       "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x500e244db08d08",
-      "oldValue": "0x85f0824a56454",
-      "newValue": "0xb22d7c741dde98"
+      "key": "0xc6d93eb33daf38",
+      "oldValue": "0x0258e84dfb764",
+      "newValue": "0x995e276b22d74"
     },
     {
-      "contract": "GovernorBravo",
-      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0x865de13acbea78",
-      "oldValue": "0x5f73e035da4c08",
-      "newValue": "0x595981605d4a"
-    },
-    {
-      "contract": "GovernorBravo",
-      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0xf5e1faea271bb8",
-      "oldValue": "0xb5277d2b71d448",
-      "newValue": "0x67aebaa1dd37f"
+      "contract": "Uni (Uniswap)",
+      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "key": "0x8cfaf9c8d00f98",
+      "oldValue": "0x0000bd153d43f8",
+      "newValue": "0xc9c89199e9e83"
     }
   ],
   "events": [],
   "metadata": {
-    "blockNumber": "22429988",
-    "timestamp": "1750018710",
     "proposalId": "17",
-    "proposer": "0xe170031174149"
+    "proposer": "0xcd71ff438db5a8",
+    "governorAddress": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "executor": "0xb5318e4180dc98",
+    "simulationBlockNumber": "22075980",
+    "simulationTimestamp": "1750202276",
+    "proposalCreatedAtBlockNumber": "22006815",
+    "proposalCreatedAtTimestamp": "1750199967"
   }
 }

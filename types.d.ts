@@ -10,10 +10,16 @@ export interface StructuredSimulationReport {
   stateChanges: SimulationStateChange[];
   events: SimulationEvent[];
   metadata: {
-    blockNumber: string;
-    timestamp: string;
     proposalId: string;
     proposer: string;
+    governorAddress: string;
+    executor?: string;
+    simulationBlockNumber: string;
+    simulationTimestamp: string;
+    proposalCreatedAtBlockNumber?: string;
+    proposalCreatedAtTimestamp?: string;
+    proposalExecutedAtBlockNumber?: string;
+    proposalExecutedAtTimestamp?: string;
   };
 }
 
@@ -61,6 +67,7 @@ export interface SimulationCalldata {
 export interface FrontendData {
   proposalData: {
     id: string;
+    governorAddress: string;
     targets: `0x${string}`[];
     values: bigint[] | string[];
     signatures: string[];

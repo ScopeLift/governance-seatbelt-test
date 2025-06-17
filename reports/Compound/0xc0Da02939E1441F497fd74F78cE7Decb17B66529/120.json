@@ -1,8 +1,8 @@
 {
   "title": "Protocol Fee Changes",
-  "proposalText": "# Scaling V4 and Supporting Unichain\nPGOV is submitting the proposal on GFX Labs' behalf because GFX no longer has sufficient voting power to submit.\n\nGFX Labs proposes that the Compound DAO allocate funding to support the integration of new protocol features and enhance the ecosystem's capabilities.",
-  "status": "error",
-  "summary": "Simulation completed with errors for proposal: \"Protocol Fee Changes\".",
+  "proposalText": "# Treasury Allocation Proposal\nThe Compound community proposes allocating treasury funds for strategic initiatives that will drive long-term growth and adoption.",
+  "status": "warning",
+  "summary": "Simulation completed with warnings for proposal: \"Protocol Fee Changes\".",
   "checks": [
     {
       "title": "Reports all state changes from the proposal",
@@ -68,29 +68,41 @@
         "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)",
         "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
       ]
+    },
+    {
+      "title": "Reports on whether the caller needs to send ETH with the call",
+      "status": "passed",
+      "details": "**Info**: No ETH is required to be sent by the account that executes this proposal.",
+      "info": [
+        "No ETH is required to be sent by the account that executes this proposal."
+      ]
     }
   ],
   "stateChanges": [
     {
-      "contract": "Uni (Uniswap)",
-      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x35b89d138a7ac",
-      "oldValue": "0x9c0f94c26ba2d",
-      "newValue": "0xd827b495021ed8"
+      "contract": "KeeperRegistry",
+      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+      "key": "0xe6012cb8b8f58",
+      "oldValue": "0xb2b8f2d2797c3",
+      "newValue": "0x8792724ab628b"
     },
     {
       "contract": "GovernorBravo",
       "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0xd66d2d48173b3",
-      "oldValue": "0xbeda2b4cb25098",
-      "newValue": "0x0bc6c37441f45"
+      "key": "0xc88813c96e00f8",
+      "oldValue": "0xb2a0c3ef1cdb7",
+      "newValue": "0x05f5e17224c8b8"
     }
   ],
   "events": [],
   "metadata": {
-    "blockNumber": "22455439",
-    "timestamp": "1750029793",
     "proposalId": "120",
-    "proposer": "0xf2956cfc7c3f68"
+    "proposer": "0x5db5b907215ec",
+    "governorAddress": "0xc0Da02939E1441F497fd74F78cE7Decb17B66529",
+    "simulationBlockNumber": "22124613",
+    "simulationTimestamp": "1750202269",
+    "proposalCreatedAtBlockNumber": "22312389",
+    "proposalCreatedAtTimestamp": "1750120925",
+    "proposalExecutedAtTimestamp": "1750193395"
   }
 }

@@ -1,0 +1,142 @@
+{
+  "proposalData": {
+    "id": "42",
+    "governorAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+    "targets": [
+      "0x9c20f3a42ee3a8"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "upgrade(address)"
+    ],
+    "calldatas": [
+      "0xa4860cf0147b18"
+    ],
+    "description": "# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market."
+  },
+  "report": {
+    "status": "error",
+    "summary": "Simulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".",
+    "markdownReport": "# Scaling V4 and Supporting Unichain\n\n## Summary\nSimulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".\n\n## Status: ERROR\n\n## Proposal Description\n# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market.\n\n## Checks Performed\n\n### Reports all state changes from the proposal\n- **Status**: passed\n- **Details**: **Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`\n\n**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`\n- **Info**: \n  - KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n  -     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`\n  - Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n  -     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`\n\n### Decodes target calldata into a human-readable format\n- **Status**: passed\n- **Details**: **Info**: `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)\n- **Info**: \n  - `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)\n\n### Reports all events emitted from the proposal\n- **Status**: passed\n- **Details**: **Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n\n**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`\n- **Info**: \n  - Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n  -     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n  - KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n  -     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`\n\n### Check all targets are verified on Etherscan\n- **Status**: passed\n- **Details**: **Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n- **Info**: \n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n\n### Check all touched contracts are verified on Etherscan\n- **Status**: passed\n- **Details**: **Info**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n- **Info**: \n  - [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n  - [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)\n\n### Check all targets do not contain selfdestruct\n- **Status**: passed\n- **Details**: **Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n- **Info**: \n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n\n### Check all touched contracts do not contain selfdestruct\n- **Status**: warning\n- **Details**: **Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n- **Info**: \n  - [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n  - [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)\n\n### Reports on whether the caller needs to send ETH with the call\n- **Status**: passed\n- **Details**: **Info**: No ETH is required to be sent by the account that executes this proposal.\n- **Info**: \n  - No ETH is required to be sent by the account that executes this proposal.\n\n### Slither static analysis\n- **Status**: passed\n- **Details**: Slither report for Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n```\n'solc --standard-json --allow-paths /home/runner/work/governance-seatbelt/governance-seatbelt' running\nWarning: crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol:6:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.\npragma experimental ABIEncoderV2;\n^-------------------------------^\n\nINFO:Detectors:\nUni._writeCheckpoint(address,uint32,uint96,uint96) (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#543-554) uses a dangerous strict equality:\n\t- nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#546)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities\n\nINFO:Detectors:\nUni.constructor(address,address,uint256).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#272) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#277)\nUni.setMinter(address).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#286) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#289)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation\n\nINFO:Detectors:\nVersion constraint ^0.5.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\nsolc-0.5.16 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity\n\nINFO:Slither:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 analyzed (2 contracts with 100 detectors), 8 result(s) found\n```\n- **Info**: \n  - Slither report for Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n```\n'solc --standard-json --allow-paths /home/runner/work/governance-seatbelt/governance-seatbelt' running\nWarning: crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol:6:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.\npragma experimental ABIEncoderV2;\n^-------------------------------^\n\nINFO:Detectors:\nUni._writeCheckpoint(address,uint32,uint96,uint96) (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#543-554) uses a dangerous strict equality:\n\t- nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#546)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities\n\nINFO:Detectors:\nUni.constructor(address,address,uint256).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#272) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#277)\nUni.setMinter(address).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#286) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#289)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation\n\nINFO:Detectors:\nVersion constraint ^0.5.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\nsolc-0.5.16 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity\n\nINFO:Slither:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 analyzed (2 contracts with 100 detectors), 8 result(s) found\n```\n\n\n## State Changes\n\n### Change 1\n- **Contract**: GovernorBravo\n- **Address**: 0x408ED6354d4973f66138C91495F2f2FCbd8724C3\n- **Key**: 0x0c202ea59841d8\n- **Old Value**: 0x382ec82da4363\n- **New Value**: 0x04dd5a5c034978\n\n### Change 2\n- **Contract**: KeeperRegistry\n- **Address**: 0x02777053d6764996e594c3E88AF1D58D5363a2e6\n- **Key**: 0xaca72a7377f1c8\n- **Old Value**: 0xafd01837cafbe\n- **New Value**: 0x29488402bf5878\n\n\n## Events Emitted\n\n\n\n## Metadata\n- **Proposal ID**: 42\n- **Proposer**: 0xaec3ca1a635b3\n- **Governor Address**: 0x408ED6354d4973f66138C91495F2f2FCbd8724C3\n- **Executor**: 0xd3de319e2a8c9\n- **Simulation Block Number**: 22055580\n- **Simulation Timestamp**: 1750202264\n- **Proposal Created At Block**: 22076825\n- **Proposal Created At Timestamp**: 1750182663\n- **Proposal Executed At Block**: 22411973\n- **Proposal Executed At Timestamp**: 1750193270\n\n---\n*Generated by governance-seatbelt-test*\n",
+    "structuredReport": {
+      "title": "Scaling V4 and Supporting Unichain",
+      "proposalText": "# Protocol Fee Changes\nThis proposal adjusts protocol fees to optimize the system's economic incentives while maintaining competitive advantages in the market.",
+      "status": "error",
+      "summary": "Simulation completed with errors for proposal: \"Scaling V4 and Supporting Unichain\".",
+      "checks": [
+        {
+          "title": "Reports all state changes from the proposal",
+          "status": "passed",
+          "details": "**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`\n\n**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`",
+          "info": [
+            "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
+            "    Slot `0x0501829a2098dcd24ef0e30c5f88882a2714e55fb810652c8592bc4a0915fbaf` changed from `\"0x00000025e35f9ca303bf6b5d9efa0a617c0552f1558c95993aa8b8a68b3e709c\"` to `\"0x00000025e3fb2b7d24cd2dbe9efa0a617c0552f1558c95993aa8b8a68b3e709c\"`",
+            "Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`",
+            "    Slot `0x78a95558fb04b554a95e8e6733a662913f8df94755af3b70a1060a00d317f6bd` changed from `\"0x000000000000000000000000000000000000000000006aae30f51b48b191c400\"` to `\"0x00000000000000000000000000000000000000000000757ae822b9b40b71c400\"`"
+          ]
+        },
+        {
+          "title": "Decodes target calldata into a human-readable format",
+          "status": "passed",
+          "details": "**Info**: `0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)",
+          "info": [
+            "`0x1a9c8182c09f50c8318d769245bea52c32be35bc` calls `transfer(0x3B59C6d0034490093460787566dc5D6cE17F2f9C, 51000000000000000000000)` on Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984` (decoded from ABI)"
+          ]
+        },
+        {
+          "title": "Reports all events emitted from the proposal",
+          "status": "passed",
+          "details": "**Info**: Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n\n**Info**:     `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`\n\n**Info**: KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`\n\n**Info**:     `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`",
+          "info": [
+            "Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`",
+            "    `Transfer(from: 0x1a9c8182c09f50c8318d769245bea52c32be35bc, to: 0x3b59c6d0034490093460787566dc5d6ce17f2f9c, amount: 51000000000000000000000)`",
+            "KeeperRegistry at `0x02777053d6764996e594c3E88AF1D58D5363a2e6`",
+            "    `UpkeepPerformed(id: 70674896803373309280938685131993977254155230537119778021708067126423115539033, success: true, from: 0x33512418380f170e5752fc233f1326f3e805ea62, payment: 43785688898716257, performData: 0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000059)`"
+          ]
+        },
+        {
+          "title": "Check all targets are verified on Etherscan",
+          "status": "passed",
+          "details": "**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)",
+          "info": [
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)"
+          ]
+        },
+        {
+          "title": "Check all touched contracts are verified on Etherscan",
+          "status": "passed",
+          "details": "**Info**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)",
+          "info": [
+            "[`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): Contract (not verified)",
+            "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (verified)",
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (verified)"
+          ]
+        },
+        {
+          "title": "Check all targets do not contain selfdestruct",
+          "status": "passed",
+          "details": "**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)",
+          "info": [
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
+          ]
+        },
+        {
+          "title": "Check all touched contracts do not contain selfdestruct",
+          "status": "warning",
+          "details": "**Warning**: [`0x33512418380F170e5752Fc233F1326f3e805eA62`](https://etherscan.io/address/0x33512418380F170e5752Fc233F1326f3e805eA62): EOA (may have code later)\n\n**Info**: [`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)\n\n**Info**: [`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)",
+          "info": [
+            "[`0x02777053D6764996e594C3e88aF1D58d5363a2E6`](https://etherscan.io/address/0x02777053D6764996e594C3e88aF1D58d5363a2E6): Contract (looks safe)",
+            "[`0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`](https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984): Contract (looks safe)"
+          ]
+        },
+        {
+          "title": "Reports on whether the caller needs to send ETH with the call",
+          "status": "passed",
+          "details": "**Info**: No ETH is required to be sent by the account that executes this proposal.",
+          "info": [
+            "No ETH is required to be sent by the account that executes this proposal."
+          ]
+        },
+        {
+          "title": "Slither static analysis",
+          "status": "passed",
+          "details": "Slither report for Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n```\n'solc --standard-json --allow-paths /home/runner/work/governance-seatbelt/governance-seatbelt' running\nWarning: crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol:6:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.\npragma experimental ABIEncoderV2;\n^-------------------------------^\n\nINFO:Detectors:\nUni._writeCheckpoint(address,uint32,uint96,uint96) (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#543-554) uses a dangerous strict equality:\n\t- nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#546)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities\n\nINFO:Detectors:\nUni.constructor(address,address,uint256).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#272) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#277)\nUni.setMinter(address).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#286) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#289)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation\n\nINFO:Detectors:\nVersion constraint ^0.5.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\nsolc-0.5.16 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity\n\nINFO:Slither:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 analyzed (2 contracts with 100 detectors), 8 result(s) found\n```",
+          "info": [
+            "Slither report for Uni (Uniswap) at `0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984`\n```\n'solc --standard-json --allow-paths /home/runner/work/governance-seatbelt/governance-seatbelt' running\nWarning: crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol:6:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.\npragma experimental ABIEncoderV2;\n^-------------------------------^\n\nINFO:Detectors:\nUni._writeCheckpoint(address,uint32,uint96,uint96) (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#543-554) uses a dangerous strict equality:\n\t- nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#546)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities\n\nINFO:Detectors:\nUni.constructor(address,address,uint256).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#272) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#277)\nUni.setMinter(address).minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#286) lacks a zero-check on :\n\t\t- minter = minter_ (crytic-export/etherscan-contracts/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984-Uni.sol#289)\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation\n\nINFO:Detectors:\nVersion constraint ^0.5.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\nsolc-0.5.16 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\nReference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity\n\nINFO:Slither:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 analyzed (2 contracts with 100 detectors), 8 result(s) found\n```"
+          ]
+        }
+      ],
+      "stateChanges": [
+        {
+          "contract": "GovernorBravo",
+          "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+          "key": "0x0c202ea59841d8",
+          "oldValue": "0x382ec82da4363",
+          "newValue": "0x04dd5a5c034978"
+        },
+        {
+          "contract": "KeeperRegistry",
+          "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+          "key": "0xaca72a7377f1c8",
+          "oldValue": "0xafd01837cafbe",
+          "newValue": "0x29488402bf5878"
+        }
+      ],
+      "events": [],
+      "metadata": {
+        "proposalId": "42",
+        "proposer": "0xaec3ca1a635b3",
+        "governorAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+        "executor": "0xd3de319e2a8c9",
+        "simulationBlockNumber": "22055580",
+        "simulationTimestamp": "1750202264",
+        "proposalCreatedAtBlockNumber": "22076825",
+        "proposalCreatedAtTimestamp": "1750182663",
+        "proposalExecutedAtBlockNumber": "22411973",
+        "proposalExecutedAtTimestamp": "1750193270"
+      }
+    }
+  }
+}

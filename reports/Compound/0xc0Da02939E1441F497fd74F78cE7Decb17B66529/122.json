@@ -1,8 +1,8 @@
 {
-  "title": "Protocol Fee Changes",
+  "title": "Governance Parameter Updates",
   "proposalText": "# Scaling V4 and Supporting Unichain\nPGOV is submitting the proposal on GFX Labs' behalf because GFX no longer has sufficient voting power to submit.\n\nGFX Labs proposes that the Compound DAO allocate funding to support the integration of new protocol features and enhance the ecosystem's capabilities.",
-  "status": "error",
-  "summary": "Simulation completed with errors for proposal: \"Protocol Fee Changes\".",
+  "status": "success",
+  "summary": "Simulation completed successfully for proposal: \"Governance Parameter Updates\".",
   "checks": [
     {
       "title": "Reports all state changes from the proposal",
@@ -80,39 +80,38 @@
   ],
   "stateChanges": [
     {
-      "contract": "Uni (Uniswap)",
-      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x5b5f387a12bbd8",
-      "oldValue": "0x786b4742fb4618",
-      "newValue": "0x03465a0f3aac58"
+      "contract": "GovernorBravo",
+      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "key": "0xc1d568adebee38",
+      "oldValue": "0x469c8eef0d0ec",
+      "newValue": "0x6b7f802096d3c8"
+    },
+    {
+      "contract": "KeeperRegistry",
+      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+      "key": "0x4e1a598e51139",
+      "oldValue": "0xa749698fda7a48",
+      "newValue": "0x2175d845c928e"
     },
     {
       "contract": "GovernorBravo",
       "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0xef47a39a30212",
-      "oldValue": "0x628b46ccd9ba4",
-      "newValue": "0x459eb9ffb543e"
-    },
-    {
-      "contract": "Uni (Uniswap)",
-      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x21e9cc6b9f847",
-      "oldValue": "0x6c94676c07eed",
-      "newValue": "0x10900fb6d66c7"
-    },
-    {
-      "contract": "GovernorBravo",
-      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0xc56755607197e8",
-      "oldValue": "0x0725f5b0beed08",
-      "newValue": "0xf1a13d83338ce"
+      "key": "0xb161b21d2030a8",
+      "oldValue": "0xf6f068ee454f08",
+      "newValue": "0x9d2bc0cf363a"
     }
   ],
   "events": [],
   "metadata": {
-    "blockNumber": "22068082",
-    "timestamp": "1749997685",
     "proposalId": "122",
-    "proposer": "0xb1003b135bd9f"
+    "proposer": "0x15d7e78633b4c",
+    "governorAddress": "0xc0Da02939E1441F497fd74F78cE7Decb17B66529",
+    "executor": "0x0ed9bd53b57f9",
+    "simulationBlockNumber": "22060389",
+    "simulationTimestamp": "1750202272",
+    "proposalCreatedAtBlockNumber": "22189561",
+    "proposalCreatedAtTimestamp": "1750118683",
+    "proposalExecutedAtBlockNumber": "22369897",
+    "proposalExecutedAtTimestamp": "1750155704"
   }
 }

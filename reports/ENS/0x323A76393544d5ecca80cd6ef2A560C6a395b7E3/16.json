@@ -1,8 +1,8 @@
 {
-  "title": "Protocol Fee Changes",
+  "title": "Emergency Action Proposal",
   "proposalText": "# Treasury Allocation Proposal\nThe ENS community proposes allocating treasury funds for strategic initiatives that will drive long-term growth and adoption.",
-  "status": "error",
-  "summary": "Simulation completed with errors for proposal: \"Protocol Fee Changes\".",
+  "status": "warning",
+  "summary": "Simulation completed with warnings for proposal: \"Emergency Action Proposal\".",
   "checks": [
     {
       "title": "Reports all state changes from the proposal",
@@ -90,37 +90,35 @@
     {
       "contract": "KeeperRegistry",
       "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
-      "key": "0xed4c59532b0bb",
-      "oldValue": "0x5469e1edda384",
-      "newValue": "0x7931aaacbf05b"
+      "key": "0xf77d9774d6dc2",
+      "oldValue": "0x379f6dac3dc758",
+      "newValue": "0xf54dd0401a3fe"
     },
     {
       "contract": "KeeperRegistry",
       "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
-      "key": "0xbac2c50b3a7188",
-      "oldValue": "0xd82516d220c7c8",
-      "newValue": "0xceae6b05f0343"
+      "key": "0x031c8fcca62c2",
+      "oldValue": "0x5244e619cf197",
+      "newValue": "0xb9c707a17ce3"
     },
     {
-      "contract": "GovernorBravo",
-      "contractAddress": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
-      "key": "0x5b7a57b0142d08",
-      "oldValue": "0xce1830efe37658",
-      "newValue": "0xa878224c2e3978"
-    },
-    {
-      "contract": "Uni (Uniswap)",
-      "contractAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-      "key": "0x5bd3dfeec40948",
-      "oldValue": "0x3948f8cb1786",
-      "newValue": "0xdbbfc75e76e998"
+      "contract": "KeeperRegistry",
+      "contractAddress": "0x02777053d6764996e594c3E88AF1D58D5363a2e6",
+      "key": "0xd81c30ecec7ab",
+      "oldValue": "0x92dc215fd9b468",
+      "newValue": "0x1ad348d4fe04a8"
     }
   ],
   "events": [],
   "metadata": {
-    "blockNumber": "22225499",
-    "timestamp": "1750046157",
     "proposalId": "16",
-    "proposer": "0x1c71cb031c9e28"
+    "proposer": "0xa62302ac970898",
+    "governorAddress": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "simulationBlockNumber": "22202924",
+    "simulationTimestamp": "1750202274",
+    "proposalCreatedAtBlockNumber": "22251535",
+    "proposalCreatedAtTimestamp": "1750168892",
+    "proposalExecutedAtBlockNumber": "22359164",
+    "proposalExecutedAtTimestamp": "1750199759"
   }
 }
